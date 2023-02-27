@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Nekst';
+    src: url('Nekst-Medium.woff2') format('woff2'),
+        url('Nekst-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nekst';
+    src: url('Nekst-Black.woff2') format('woff2'),
+        url('Nekst-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nekst';
+    src: url('Nekst-Regular.woff2') format('woff2'),
+        url('Nekst-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nekst';
+    src: url('Nekst-Thin.woff2') format('woff2'),
+        url('Nekst-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nekst';
+    src: url('Nekst-Bold.woff2') format('woff2'),
+        url('Nekst-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nekst';
+    src: url('Nekst-Light.woff2') format('woff2'),
+        url('Nekst-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nekst';
+    src: url('Nekst-SemiBold.woff2') format('woff2'),
+        url('Nekst-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

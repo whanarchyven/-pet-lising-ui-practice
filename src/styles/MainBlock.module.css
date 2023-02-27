@@ -1,0 +1,13 @@
+.blockWrapper{
+    background: black;
+    border-radius: 32px;
+    width: 100%;
+    height: 473px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.nav{
+    position: relative;
+
+}

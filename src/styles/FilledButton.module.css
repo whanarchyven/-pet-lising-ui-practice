@@ -1,0 +1,25 @@
+.buttonFilled{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FF9514;
+    border-radius: 9999px;
+    border-width: 0;
+    color: white;
+    font-weight: bold;
+    transition: all;
+    transition-duration: 300ms;
+    cursor: pointer;
+    font-family: Gilroy;
+}
+
+.buttonFilled:hover{
+    background: #111111;
+}
+.buttonFilled:focus{
+    background: #575757;
+}
+.buttonFilled:disabled{
+    opacity: 0.4;
+}

@@ -1,0 +1,29 @@
+.buttonOutlined{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9999px;
+    border-width: 2px;
+    border-color:#FF9514;
+    border-style: solid;
+    background: transparent;
+    color: #FF9514;
+    font-weight: bold;
+    transition: all;
+    transition-duration: 300ms;
+    cursor: pointer;
+    font-family: Gilroy;
+}
+
+.buttonOutlined:hover{
+    background: #FF9514;
+    color: white;
+}
+.buttonOutlined:focus{
+    background: #FFA83D;
+    color: white;
+}
+.buttonOutlined:disabled{
+    opacity: 0.4;
+}

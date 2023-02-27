@@ -1,0 +1,106 @@
+.sliderWrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    align-items: center;
+    position: relative;
+}
+.sliderTextBlock{
+    grid-column: span 5/span 5;
+    color: white;
+    font-family: Nekst;
+    padding-left: 70px;
+}
+.sliderTextBlock>h1{
+    font-size: 54px;
+    line-height: 90%;
+    font-weight: 900;
+}
+.sliderTextBlock>p{
+    font-size: 30px;
+    line-height: 90%;
+    font-weight: 900;
+}
+.sliderSwiperBlock{
+    height: 90%;
+    grid-column: span 7/span 7;
+    position: relative;
+}
+.sliderNavigationButtons{
+    z-index: 50;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+.sliderNextButton{
+    transition: all;
+    padding: 0;
+    border: 0;
+    background: 0;
+    transition-duration: 300ms;
+    width: 50px;
+    height: 50px;
+    border-radius: 9999px;
+    cursor: pointer;
+}
+.sliderNextButton:hover{
+    background: #2F2F2F;
+}
+.sliderNextButton:focus{
+    background: #4C4C4C;
+}
+
+.sliderPrevButton{
+    transition: all;
+    cursor: pointer;
+    transition-duration: 300ms;
+    background: transparent;
+    border: 2px solid white;
+    padding: 0;
+    opacity: 0.5;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+}
+
+.sliderPrevButton:hover{
+    opacity: 1;
+}
+.sliderPrevButton:focus{
+    background: #4C4C4C;
+}
+.paginationBlock{
+    z-index: 50;
+    position: absolute;
+    left: 0px;
+    bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.paginationDotActive{
+    transition: all;
+    transition-duration: 300ms;
+    width: 12px;
+    height: 12px;
+    border-radius: 9999px;
+    margin-right: 20px;
+    background: white;
+}
+.paginationDot{
+    transition: all;
+    transition-duration: 300ms;
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    margin-right: 20px;
+    background: white;
+    opacity: 0.5;
+}

@@ -124,7 +124,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0px 7px;
+    margin: 20px 7px;
 }
 .popUpCloseIcon{
     position: absolute;
@@ -139,4 +139,41 @@
     cursor: pointer;
     background: #F3F3F4;
     border-radius: 999px;
+}
+
+@media screen and (max-width: 768px){
+    .popUpContent{
+        width: 620px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .popUpContainer{
+        height: 90%;
+    }
+    .popUpContent{
+        width: 300px;
+    }
+    .popUpContent>h3{
+        font-family: Nekst;
+        font-size: 26px;
+        font-weight: 900;
+        margin: 0;
+    }
+    .popUpContent>p{
+        font-size: 16px;
+    }
+    .popUpInputFields{
+        grid-template-columns: repeat(1,1fr);
+        gap: 35px;
+    }
+    .popUpWarning{
+        grid-column: span 1/span 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        border: 2px solid #F3F3F4;
+        border-radius: 16px;
+        text-align: center;
+    }
 }

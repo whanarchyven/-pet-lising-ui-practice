@@ -9,7 +9,7 @@
 }
 
 .inputWrapper{
-    width: 100%;
+    width: 96%;
     height: 68px;
     border-radius: 16px;
     background: #F3F3F4;
@@ -51,4 +51,21 @@
     bottom: -5px;
     margin-left: 2%;
     width: 96%;
+}
+
+@media screen and (max-width: 320px) {
+    .inputContainerLabel{
+        color: #575757;
+        font-family: Gilroy;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .inputWrapper{
+        font-size: 22px;
+    }
+    .textInput{
+        font-size: 22px;
+
+    }
 }

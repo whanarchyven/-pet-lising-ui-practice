@@ -29,9 +29,9 @@ const SliderBlock = () => {
             imageUrl: '/images/cars/car1.png'
         },
         {
-            title: 'Артём Леонтьев хуеплёт позорный',
-            subtitle: 'до такой машины ему срать и срать',
-            buttonText: 'Оставить заявку',
+            title: 'Kia RIO 2022',
+            subtitle: 'уверенный комфорт по городу',
+            buttonText: 'Беру сегодня !',
             imageUrl: '/images/cars/car1.png'
         }
     ]

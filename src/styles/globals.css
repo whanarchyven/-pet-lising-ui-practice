@@ -2,8 +2,11 @@
 @import "public/fonts/Nekst/stylesheet.css";
 
 body{
-    padding: 0px 2rem;
-    padding-bottom: 7rem;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: unset;
 }
 
 input[type=range] {

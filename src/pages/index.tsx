@@ -58,9 +58,11 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <main>
+            <main className={styles.main}>
                 <div className={styles.nav}>
-                    <Navbar links={links}></Navbar>
+                    <div className={styles.subNav}>
+                        <Navbar links={links}></Navbar>
+                    </div>
                 </div>
                 <div className={styles.blockWrapper}>
                     <SliderBlock></SliderBlock>

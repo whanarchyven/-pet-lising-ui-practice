@@ -48,8 +48,9 @@ const SimpleInput = ({type,  placeHolder, errorMessage,  value, mutateValue,vali
                     fontSize: '50%',
                     fontWeight: '400',
                     transition: 'all',
-                    transitionDuration: '1000ms'
-                }}>{placeHolder}</p> : <p style={{transition: 'all', transitionDuration: '1000ms'}}>{placeHolder}</p>}
+                    transitionDuration: '1000ms',
+                    marginTop:'5px'
+                }}>{placeHolder}</p> : <p style={{transition: 'all', transitionDuration: '1000ms',marginTop:'5px'}}>{placeHolder}</p>}
                 {inputDisplay ? <input type={type} className={styles.textInput} value={value} onChange={(event) => {
                     mutateValue(event.target.value)
                 }}/> : null}

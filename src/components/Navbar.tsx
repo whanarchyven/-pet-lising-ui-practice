@@ -33,7 +33,7 @@ const Navbar = ({links}: navbarInterface) => {
             </div>
             <div className={style.navigation}>
                 <div className={style.requestButton}>
-                    <OutlinedButton title={'Оставить заявку'} width={"100%"} height={'48px'}></OutlinedButton>
+                    <OutlinedButton fontSize={'16px'} isRequestButton={true} title={'Оставить заявку'} width={"100%"} height={'48px'}></OutlinedButton>
                 </div>
                 {links.map((item,counter) => {
                     if (item.haveSecond) {

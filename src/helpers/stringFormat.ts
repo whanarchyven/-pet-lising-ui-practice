@@ -1,21 +1,16 @@
-export default function stringFormat (num,counter){
-    if(counter===undefined) {
-        let temp = 1;
-        if (Math.ceil(num / 1000) != 0) {
-            temp += 1;
-            stringFormat(num/1000,temp)
-        }
-        else{
-            return temp;
-        }
+export function stringFormat (num:number){
+    let resultTemp=num.toString()
+    let result=[]
+    let index=resultTemp.length-1;
+    do {
+        result.push(resultTemp[index-2]+resultTemp[index-1]+resultTemp[index])
+        index=index-3;
     }
-    else{
-        if (Math.ceil(num / 1000) != 0) {
-            counter += 1;
-            stringFormat(num/1000,counter)
-        }
-        else{
-            return counter;
-        }
+    while (index>2)
+    let resultString=resultTemp.slice(0,index)
+    let iterations=result.length
+    for(let i=0;i<iterations;i++){
+        resultString+=' '+result.pop()
     }
+    return resultString
 }

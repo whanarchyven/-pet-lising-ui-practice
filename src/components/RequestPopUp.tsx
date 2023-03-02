@@ -14,11 +14,23 @@ const RequestPopUp = ({togglePop}:requestPopUp) => {
 
 
     const phoneNumberValidation=(value:string)=>{
-        return validator.isMobilePhone(value)
-
+        for(let i=0; i<value.length; i++){
+            if(value[i]=='_'){
+                return false
+            }
+        }
+        return true
     }
 
     const nameValidation=(value:string)=>{
+        function containsNumber(str:string) {
+            return /\d/.test(str);
+        }
+
+        if(containsNumber(value)){
+            return false
+        }
+
         return value.charAt(0)===value.charAt(0).toUpperCase()
     }
 
@@ -34,7 +46,7 @@ const RequestPopUp = ({togglePop}:requestPopUp) => {
                     <p>Заполните форму, и мы вскоре свяжемся с вами, чтобы <br/> ответить на все вопросы</p>
                     <div>
                         <form className={styles.popUpInputFields} onSubmit={()=>{alert('submitted')}}>
-                            <SimpleInput errorMessage={'Номер введён некорректно'} validationFunc={phoneNumberValidation} value={phoneNumber} mutateValue={setPhoneNumber} placeHolder={'Телефон *'} ></SimpleInput>
+                            <SimpleInput type={'phoneNumber'} errorMessage={'Номер введён некорректно'} validationFunc={phoneNumberValidation} value={phoneNumber} mutateValue={setPhoneNumber} placeHolder={'Телефон *'} ></SimpleInput>
                             <SimpleInput errorMessage={'Имя введено некорректно'} value={clientName} validationFunc={nameValidation} mutateValue={setClientName} type={'text'} placeHolder={'Имя *'} ></SimpleInput>
                             <div className={styles.popUpWarning}>
                                 <p>Нажимая на кнопку «Оставить заявку»,  я даю <br/> <span>согласие на обработку персональных данных</span></p>

@@ -6,6 +6,7 @@ import {Swiper, SwiperSlide, useSwiper} from "swiper/react";
 import "swiper/css";
 import {Swiper as SwiperType, Navigation,Autoplay} from 'swiper';
 import {CountdownCircleTimer} from 'react-countdown-circle-timer'
+import useWindowDimensions from "@/helpers/useWindowDimensions";
 
 const SliderBlock = () => {
     const navigationPrevRef = useRef(null)
@@ -56,6 +57,8 @@ const SliderBlock = () => {
 
     const [activeSlide, setActiveSlide] = useState(slides[0])
 
+    const dimension=useWindowDimensions().width
+
     return (
         <div className={styles.sliderWrapper}>
             <div className={styles.sliderTextBlock}>
@@ -80,10 +83,10 @@ const SliderBlock = () => {
 
                 >
                     {slides.map((slide => {
-                        return <SwiperSlide><img style={{height: "100%"}} src={slide.imageUrl}/></SwiperSlide>
+                        return <SwiperSlide key={slide.title}><img style={{height: "100%"}} src={slide.imageUrl}/></SwiperSlide>
                     }))}
                 </Swiper>
-                <div className={styles.sliderNavigationButtons}>
+                {dimension<=1024?<div></div>:<div className={styles.sliderNavigationButtons}>
                     <button className={styles.sliderPrevButton} onClick={() => {
                         swiperRef.current?.slidePrev()
                         setTimeout(()=>{
@@ -106,14 +109,14 @@ const SliderBlock = () => {
                                               colors={'#FFF'}>{({remainingTime}) => <img
                             src={'/images/slideNext.svg'}/>}</CountdownCircleTimer>
                     </button>
-                </div>
+                </div>}
                 <div className={styles.paginationBlock}>
                     {slides.map((item,counter)=>{
                         if(activeSlide.title==item.title){
-                            return <div className={styles.paginationDotActive}></div>
+                            return <div key={counter} className={styles.paginationDotActive}></div>
                         }
                         else{
-                            return <div className={styles.paginationDot}></div>
+                            return <div key={counter} className={styles.paginationDot}></div>
                         }
                     })}
                 </div>

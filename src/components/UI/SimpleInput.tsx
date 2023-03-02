@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import styles from "@/styles/SimpleInput.module.css";
-
+import InputMask from 'react-input-mask';
 interface simpleInputInterface {
     value: string,
     mutateValue: (newValue: string) => any,
@@ -51,11 +51,13 @@ const SimpleInput = ({type,  placeHolder, errorMessage,  value, mutateValue,vali
                     transitionDuration: '1000ms',
                     marginTop:'5px'
                 }}>{placeHolder}</p> : <p style={{transition: 'all', transitionDuration: '1000ms',marginTop:'5px'}}>{placeHolder}</p>}
-                {inputDisplay ? <input type={type} className={styles.textInput} value={value} onChange={(event) => {
+                {inputDisplay ? <>{type=='phoneNumber'?<InputMask className={styles.textInput} value={value} onChange={(event) => {
                     mutateValue(event.target.value)
-                }}/> : null}
+                }} mask="+7 (999) 999-99-99" />:<input type={type} className={styles.textInput} value={value} onChange={(event) => {
+                    mutateValue(event.target.value)
+                }}/>}</> : null}
                 {status=='failure'?<p className={styles.errorMessage}>{errorMessage}</p>:null}
-                {status=='success'?<img className={styles.successButton} src={'/images/successStatus.svg'}/>:null}
+                {status=='success'?<img className={styles.successButton} alt={'succes status'} title={'success status'} src={'/images/successStatus.svg'}/>:null}
 
             </div>
         </div>

@@ -63,7 +63,7 @@ const SliderBlock = () => {
         <div className={styles.sliderWrapper}>
             <div className={styles.sliderTextBlock}>
                 <h1>{activeSlide.title}</h1>
-                <p>{activeSlide.subtitle}</p>
+                {dimension>768?<p>{activeSlide.subtitle}</p>:null}
                 <FilledButton fontSize={'16px'} isRequestButton={true} title={activeSlide.buttonText} width={'174px'} height={'48px'}></FilledButton>
             </div>
             <div className={styles.sliderSwiperBlock}>

@@ -83,6 +83,15 @@
         line-height: 90%;
         color: #575757;
     }
+    .calculatorResults{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .calculatorWrapper>h2{
+        font-family: Nekst;
+        font-weight: 900;
+        font-size: 34px;
+        line-height: 90%;
+    }
 
 }
 

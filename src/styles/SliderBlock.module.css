@@ -128,8 +128,13 @@
         position: absolute;
         width: 100%;
         top: auto;
-        bottom: 30px;
+        bottom: 70px;
         background: transparent;
+        white-space: normal;
+    }
+    .sliderTextBlock>h1{
+        font-size: 34px;
+        width: 80%;
     }
     .sliderTextBlock>p{
         display: none;

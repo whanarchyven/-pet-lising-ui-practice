@@ -175,5 +175,9 @@
         border: 2px solid #F3F3F4;
         border-radius: 16px;
         text-align: center;
+        font-size: 10px;
+    }
+    .contactsBlock{
+        margin: 4px 7 px;
     }
 }
